@@ -13,9 +13,6 @@ public class HelloController {
     @Value("${hello.message}")
     private String message;
 
-    @Value("${hello.something}")
-    private String something;
-
     @Autowired
     private DiscoveryClient discoveryClient;
 
