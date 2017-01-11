@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Value("${hello.message}")
-    private static String message;
+    private String message;
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot!" + " hello from spring boot";
+        return "Greetings from Spring Boot!" + " hello from spring boot" + message;
     }
     
 }
