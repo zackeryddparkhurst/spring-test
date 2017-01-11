@@ -11,7 +11,9 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.3.RELEASE</version>
+
     </parent>
+
 
     <dependencyManagement>
         <dependencies>
@@ -28,13 +30,10 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-context</artifactId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>1.1.6.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>io.fabric8</groupId>
-            <artifactId>spring-cloud-starter-kubernetes</artifactId>
-            <version>${spring-cloud-kubernetes.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -52,8 +51,24 @@
             <scope>test</scope>
         </dependency>
         <!-- end::tests[] -->
-    </dependencies>
+        <!-- https://mvnrepository.com/artifact/io.fabric8/spring-cloud-starter-kubernetes-all -->
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>spring-cloud-starter-kubernetes</artifactId>
+            <version>${spring-cloud-kubernetes.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>spring-cloud-kubernetes-discovery</artifactId>
+            <version>${spring-cloud-kubernetes.version}</version>
+        </dependency>
+
+    </dependencies>
 
     <properties>
         <java.version>1.8</java.version>
