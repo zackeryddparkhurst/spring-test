@@ -10,15 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
 
     @Value("${hello.message}")
     private String message;
 
     @RequestMapping("/")
     public String index() {
-        System.out.println("test:" + discoveryClient.getServices());
         return "Greetings from Spring Boot! - It is " + message;
     }
 
